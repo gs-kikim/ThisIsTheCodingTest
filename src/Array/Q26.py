@@ -22,9 +22,7 @@ def s2(n, data):
 
     result = 0
     while len(heap) != 1:
-        one = heapq.heappop(heap)
-        two = heapq.heappop(heap)
-        sum_value = one + two
+        sum_value = heapq.heappop(heap) + heapq.heappop(heap)
         result += sum_value
         heapq.heappush(heap, sum_value)
     return result
@@ -34,7 +32,6 @@ def s2(n, data):
 # heap = []
 #
 # for i in range(n):
-#     data = int(input())
-#     heapq.heappush(heap, data)
+#     heapq.heappush(heap, int(input()))
 #
 # print(s2(heap))

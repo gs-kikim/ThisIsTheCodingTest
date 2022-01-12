@@ -1,3 +1,4 @@
+# LIS 가장 긴 증가하는 부분 수열
 def DP_Q34(x: int, arr: list) -> int:
     dp = [1]*x
     arr.reverse()
@@ -10,12 +11,6 @@ def DP_Q34(x: int, arr: list) -> int:
     return (x - max(dp))
 
 # n = int(input())
-# t = []
-# p = []
+# l = map(int, input().split())
 #
-# for _ in range(n):
-#     x, y = map(int, input().split())
-#     t.append(x)
-#     p.append(y)
-#
-# DP_Q34(n, t, p)
+# print(DP_Q34(n, l))
