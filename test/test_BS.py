@@ -1,6 +1,6 @@
 import unittest
 
-from src.BinarySearch import Q27, Q28
+from src.BinarySearch import Q27, Q28, Q30
 
 
 class TestGreedy(unittest.TestCase):
@@ -14,6 +14,9 @@ class TestGreedy(unittest.TestCase):
         self.assertEqual(Q28.solution(5, [-15, -6, 1, 3, 7]), 3)
         self.assertEqual(Q28.solution(7, [-15, -4, 2, 8, 9, 13, 15]), 2)
         self.assertEqual(Q28.solution(7, [-15, -4, 3, 8, 9, 13, 15]), -1)
+
+    def test_Q30(self):
+        self.assertEqual(Q30.solution(["frodo", "front", "frost", "frozen", "frame", "kakao"],["fro??", "????o", "fr???", "fro???", "pro?"]), [3, 2, 4, 1, 0])
 
 
 
