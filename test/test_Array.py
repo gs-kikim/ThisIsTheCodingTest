@@ -4,7 +4,7 @@ import src.Array.Q23 as Q23
 from src.Array import Q24, Q25, Q26
 
 
-class TestGreedy(unittest.TestCase):
+class TestArray(unittest.TestCase):
     def test_Q23(self):
         self.assertEqual(Q23.array_Q23(12, ['Junkyu 50 60 100',
                                             'Sangkeun 80 60 50',
