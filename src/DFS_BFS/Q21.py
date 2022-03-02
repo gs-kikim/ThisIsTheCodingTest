@@ -5,7 +5,7 @@ https://www.acmicpc.net/problem/16234
 
 """
 
-import math
+import sys
 
 X = [-1, 0, 1, 0]
 Y = [0, -1, 0, 1]
@@ -30,7 +30,7 @@ def move(find):
     for x, y in find:
         psum += A[x][y]
 
-    average = math.trunc(psum / len(find))
+    average = psum // len(find)
     for x, y in find:
         A[x][y] = average
 
@@ -84,9 +84,9 @@ def solution(n, l, r, graph):
 
     return res
 
-# n, l, r = map(int, input().split())
-# graph = []
-# for _ in range(n):
-#     graph.append((list(map(int, input().split()))))
-#
-# print(solution(n, l, r, graph))
+n, l, r = map(int, sys.stdin.readline().split())
+graph = []
+for _ in range(n):
+    graph.append((list(map(int, sys.stdin.readline().split()))))
+
+print(solution(n, l, r, graph))
