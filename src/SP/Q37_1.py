@@ -1,7 +1,12 @@
+"""
+https://www.acmicpc.net/problem/11404
+"""
+
 INF = int(1e9)
+N: int
+M: int
 
-
-def solution(N, M, I):
+def solution():
     D = [[INF] * N for _ in range(N)]
 
     for a in range(N):
@@ -10,7 +15,7 @@ def solution(N, M, I):
                 D[a][b] = 0
 
     for i in range(M):
-        a, b, c = I[i]
+        a, b, c = map(int, input().split())
         if D[a - 1][b - 1] > c:
             D[a - 1][b - 1] = c
 
@@ -23,8 +28,13 @@ def solution(N, M, I):
     for a in range(N):
         for b in range(N):
             if D[a][b] == INF:
-                print("0")
+                print(0, end=" ")
             else:
-                print(" "+D[a][b])
+                print(D[a][b], end=" ")
 
-    return D
+        print()
+
+
+N = int(input())
+M = int(input())
+solution()

@@ -24,8 +24,8 @@ def solution(n, M, I):
     for i in range(N):
         dis.append(dk(i))
 
-    cnt = 0
     for i in range(N):
+        cnt = 0
         for j in range(N):
             if dis[i][j] != INF or dis[j][i] != INF:
                 cnt += 1
