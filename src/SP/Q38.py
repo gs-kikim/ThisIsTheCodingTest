@@ -29,7 +29,7 @@ def solution(n, M, I):
         for j in range(N):
             if dis[i][j] != INF or dis[j][i] != INF:
                 cnt += 1
-        if cnt == N - 1:
+        if cnt == N:
             res += 1
     return res
 

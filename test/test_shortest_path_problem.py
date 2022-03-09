@@ -1,6 +1,6 @@
 import unittest
 
-from src.SP import Q37, Q38
+from src.SP import Q37, Q38, Q38_1
 
 
 class TestShortestPathProblem(unittest.TestCase):
@@ -29,6 +29,15 @@ class TestShortestPathProblem(unittest.TestCase):
 
     def test_Q28(self):
         self.assertEqual(Q38.solution(6, 6, [(1, 5),
+                                             (3, 4),
+                                             (4, 2),
+                                             (4, 6),
+                                             (5, 2),
+                                             (5, 4)
+                                             ]), 1)
+
+    def test_Q28(self):
+        self.assertEqual(Q38_1.solution(6, 6, [(1, 5),
                                              (3, 4),
                                              (4, 2),
                                              (4, 6),
