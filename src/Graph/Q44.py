@@ -32,12 +32,13 @@ def solution(N, MAP):
         parent[i] = i
 
     for i in range(N - 1):
-        a = i
-        b = i + 1
-        xa, ya, za = MAP[a]
-        xb, yb, zb = MAP[b]
-        cost = min([abs(xa - xb), abs(ya-xb), abs(za - zb)])
-        edges.append((cost, a, b))
+        for j in range(i+1, N):
+            a = i
+            b = j
+            xa, ya, za = MAP[a]
+            xb, yb, zb = MAP[b]
+            cost = min([abs(xa - xb), abs(ya-yb), abs(za - zb)])
+            edges.append((cost, a, b))
 
     edges.sort()  # 비용순 정렬
 
