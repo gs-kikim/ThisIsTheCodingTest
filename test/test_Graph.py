@@ -44,7 +44,7 @@ class TestGraph(unittest.TestCase):
                                            (10, -4, -1),
                                            (19, -4, 19)]), 4)
 
-    def test_Q44(self):
+    def test_Q45(self):
         self.assertEqual(Q45.solution(5, [5, 4, 3, 2, 1],
                                       2,
                                       [(2, 4),
