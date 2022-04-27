@@ -5,7 +5,7 @@ def solution(s):
     chunks = len(s)
     min_num = chunks
 
-    for chunk_size in range(1, chunks):
+    for chunk_size in range(1, chunks//2+1):
         l = [s[i:i + chunk_size] for i in range(0, chunks, chunk_size)]
         l.append("#")
         w = l[0]
