@@ -1,6 +1,6 @@
 import unittest
 
-from src.implement import Q7, Q8, Q9, Q10, Q11
+from src.implement import Q7, Q8, Q9, Q10, Q11, Q14, Q12
 
 
 class TestImplement(unittest.TestCase):
@@ -32,7 +32,17 @@ class TestImplement(unittest.TestCase):
             Q11.solution(10, 5, [(1, 5), (1, 3), (1, 2), (1, 6), (1, 7)], 4,
                          [(8, "D"), (10, 'D'), (11, 'D'), (13, 'L')]), 13)
 
+    def test_Q12(self):
+        self.assertEqual(Q12.solution(5, [[1, 0, 0, 1], [1, 1, 1, 1], [2, 1, 0, 1], [2, 2, 1, 1], [5, 0, 0, 1],
+                                          [5, 1, 0, 1], [4, 2, 1, 1], [3, 2, 1, 1]]),
+                         [[1, 0, 0], [1, 1, 1], [2, 1, 0], [2, 2, 1], [3, 2, 1], [4, 2, 1], [5, 0, 0], [5, 1, 0]])
+        self.assertEqual(Q12.solution(5, [[0, 0, 0, 1], [2, 0, 0, 1], [4, 0, 0, 1], [0, 1, 1, 1], [1, 1, 1, 1],
+                                          [2, 1, 1, 1], [3, 1, 1, 1], [2, 0, 0, 0], [1, 1, 1, 0], [2, 2, 0, 1]]),
+                         [[0, 0, 0], [0, 1, 1], [1, 1, 1], [2, 1, 1], [3, 1, 1], [4, 0, 0]])
 
+    def test_Q14(self):
+        self.assertEqual(Q14.solution(12, [1, 5, 6, 10], [1, 2, 3, 4]), 2)
+        self.assertEqual(Q14.solution(12, [1, 3, 4, 9, 10], [3, 5, 7]), 1)
 
-if __name__ == '__main__':
-    unittest.main()
+    if __name__ == '__main__':
+        unittest.main()
